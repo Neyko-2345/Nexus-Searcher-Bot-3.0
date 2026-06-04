@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
 import { isAdmin } from '../utils/adminCheck.js';
 import { getDB } from '../utils/database.js';
 
@@ -24,6 +24,11 @@ export const data = new SlashCommandBuilder()
     .setDescription('Voir les dernières recherches effectuées')
     .addIntegerOption(opt => opt.setName('nombre').setDescription('Nombre à afficher (max 20)').setMinValue(1).setMaxValue(20))
     .addUserOption(opt => opt.setName('utilisateur').setDescription('Filtrer par utilisateur'))
+  )
+  .addSubcommand(sub => sub
+    .setName('user-history')
+    .setDescription('Historique de recherche complet d\'un membre — 1 page = 1 recherche, paginé')
+    .addUserOption(opt => opt.setName('utilisateur').setDescription('Membre dont voir l\'historique').setRequired(true))
   )
   .addSubcommand(sub => sub
     .setName('search')
@@ -56,6 +61,48 @@ export const data = new SlashCommandBuilder()
     .setName('clear')
     .setDescription('Supprimer tous les logs de recherche enregistrés')
   );
+
+export function buildUserHistoryPage(db, targetUserId, targetUsername, page, total) {
+  const row = db.prepare(
+    'SELECT * FROM search_logs WHERE user_id = ? ORDER BY id DESC LIMIT 1 OFFSET ?'
+  ).get(targetUserId, page - 1);
+
+  const embed = new EmbedBuilder()
+    .setColor(0x5865f2)
+    .setTitle(`📋 Historique de ${targetUsername} • ${page}/${total}`)
+    .setTimestamp();
+
+  if (row) {
+    const ts = Math.floor(new Date(row.timestamp).getTime() / 1000);
+    embed.setDescription([
+      `**🔍 Option :** \`${row.search_type || 'N/A'}\``,
+      `**📝 Requête :** \`${row.query || 'N/A'}\``,
+      `**📊 Résultats :** \`${row.result_count ?? '?'}\``,
+      `**📍 Salon :** ${row.channel_id ? `<#${row.channel_id}>` : '*Inconnu*'}`,
+      `**🕐 Date :** <t:${ts}:F>`,
+    ].join('\n'));
+  }
+
+  const btnRow = new ActionRowBuilder().addComponents(
+    new ButtonBuilder()
+      .setCustomId(`uhist_prev_${targetUserId}_${page}`)
+      .setLabel('◀ Précédent')
+      .setStyle(ButtonStyle.Secondary)
+      .setDisabled(page <= 1),
+    new ButtonBuilder()
+      .setCustomId(`uhist_info_${targetUserId}_${page}`)
+      .setLabel(`${page} / ${total}`)
+      .setStyle(ButtonStyle.Primary)
+      .setDisabled(true),
+    new ButtonBuilder()
+      .setCustomId(`uhist_next_${targetUserId}_${page}`)
+      .setLabel('Suivant ▶')
+      .setStyle(ButtonStyle.Secondary)
+      .setDisabled(page >= total)
+  );
+
+  return { embed, btnRow };
+}
 
 export async function execute(interaction) {
   if (!isAdmin(interaction.member)) {
@@ -149,6 +196,26 @@ export async function execute(interaction) {
     });
   }
 
+  // ── USER-HISTORY ──────────────────────────────────────────────────────────────
+  if (sub === 'user-history') {
+    const targetUser = interaction.options.getUser('utilisateur');
+    const total      = db.prepare('SELECT COUNT(*) as cnt FROM search_logs WHERE user_id = ?').get(targetUser.id)?.cnt ?? 0;
+
+    if (total === 0) {
+      return interaction.reply({
+        embeds: [new EmbedBuilder()
+          .setColor(0xffa500).setTitle(`📋 Historique de ${targetUser.username}`)
+          .setDescription('Aucune recherche enregistrée pour cet utilisateur.')
+          .setTimestamp()
+        ],
+        ephemeral: true
+      });
+    }
+
+    const { embed, btnRow } = buildUserHistoryPage(db, targetUser.id, targetUser.username, 1, total);
+    return interaction.reply({ embeds: [embed], components: [btnRow], ephemeral: true });
+  }
+
   // ── SEARCH ────────────────────────────────────────────────────────────────────
   if (sub === 'search') {
     const motCle     = interaction.options.getString('mot_cle');
@@ -158,30 +225,14 @@ export async function execute(interaction) {
     const jusqua     = interaction.options.getString('jusqua');
     const limite     = interaction.options.getInteger('limite') || 10;
 
-    // Build dynamic query
     const conditions = [];
     const params     = [];
 
-    if (motCle) {
-      conditions.push("query LIKE ?");
-      params.push(`%${motCle}%`);
-    }
-    if (userFilter) {
-      conditions.push("user_id = ?");
-      params.push(userFilter.id);
-    }
-    if (option) {
-      conditions.push("search_type LIKE ?");
-      params.push(`%${option}%`);
-    }
-    if (depuis) {
-      conditions.push("timestamp >= ?");
-      params.push(`${depuis} 00:00:00`);
-    }
-    if (jusqua) {
-      conditions.push("timestamp <= ?");
-      params.push(`${jusqua} 23:59:59`);
-    }
+    if (motCle)      { conditions.push("query LIKE ?");       params.push(`%${motCle}%`); }
+    if (userFilter)  { conditions.push("user_id = ?");        params.push(userFilter.id); }
+    if (option)      { conditions.push("search_type LIKE ?"); params.push(`%${option}%`); }
+    if (depuis)      { conditions.push("timestamp >= ?");     params.push(`${depuis} 00:00:00`); }
+    if (jusqua)      { conditions.push("timestamp <= ?");     params.push(`${jusqua} 23:59:59`); }
 
     const where = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
     params.push(limite);
@@ -194,12 +245,14 @@ export async function execute(interaction) {
           .setColor(0xffa500).setTitle('🔍 Recherche dans les logs — 0 résultat')
           .setDescription('Aucun log ne correspond à tes critères.')
           .addFields(
-            motCle     ? { name: 'Mot-clé',     value: motCle,          inline: true } : null,
-            userFilter ? { name: 'Utilisateur',  value: userFilter.tag,  inline: true } : null,
-            option     ? { name: 'Option',       value: option,          inline: true } : null,
-            depuis     ? { name: 'Depuis',       value: depuis,          inline: true } : null,
-            jusqua     ? { name: 'Jusqu\'à',     value: jusqua,          inline: true } : null,
-          ).filter(Boolean)
+            ...[
+              motCle     ? { name: 'Mot-clé',    value: motCle,         inline: true } : null,
+              userFilter ? { name: 'Utilisateur', value: userFilter.tag, inline: true } : null,
+              option     ? { name: 'Option',      value: option,         inline: true } : null,
+              depuis     ? { name: 'Depuis',      value: depuis,         inline: true } : null,
+              jusqua     ? { name: 'Jusqu\'à',    value: jusqua,         inline: true } : null,
+            ].filter(Boolean)
+          )
           .setTimestamp()
         ],
         ephemeral: true

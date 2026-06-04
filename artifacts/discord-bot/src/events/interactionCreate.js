@@ -3,6 +3,7 @@ import { handleSearchModal } from '../handlers/modalHandler.js';
 import { handleExportButton } from '../handlers/exportHandler.js';
 import { handlePageButton } from '../handlers/globalSearchHandler.js';
 import { buildGuideEmbed, buildGuideRow, GUIDE_PAGES } from '../commands/admin-guide.js';
+import { buildUserHistoryPage } from '../commands/admin-logs.js';
 import {
   ActionRowBuilder, StringSelectMenuBuilder, EmbedBuilder,
   ModalBuilder, TextInputBuilder, TextInputStyle
@@ -15,6 +16,15 @@ function getAccessConfig(db) {
   const row = db.prepare("SELECT value FROM guild_config WHERE key = 'access_config'").get();
   if (!row) return {};
   try { return JSON.parse(row.value); } catch { return {}; }
+}
+
+function getStatusConfig(db) {
+  const row = db.prepare("SELECT value FROM guild_config WHERE key = 'status_watch_config'").get();
+  if (!row) return null;
+  try {
+    const cfg = JSON.parse(row.value);
+    return cfg?.enabled === true ? cfg : null;
+  } catch { return null; }
 }
 
 const DEFAULT_VIP_SET = new Set(['intelx', 'nazapi']);
