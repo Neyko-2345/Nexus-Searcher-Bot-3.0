@@ -49,14 +49,14 @@ function buildMainOptions(db, vip, accessConfig) {
   const options = [];
 
   const globalEmoji = getGlobalEmoji();
-  const globalOpt = { label: 'Global', value: 'global', description: 'Recherche dans toutes les bases de données' };
+  const globalOpt = { label: 'Global', value: 'global' };
   if (globalEmoji) globalOpt.emoji = globalEmoji;
   options.push(globalOpt);
 
   const groups = db.prepare('SELECT * FROM option_groups ORDER BY position ASC').all();
   for (const g of groups) {
     if (!vip && g.vip_only) continue;
-    const opt = { label: g.label, value: `grp_${g.value}`, description: g.description ? g.description.substring(0, 100) : `Sous-menu ${g.label}` };
+    const opt = { label: g.label, value: `grp_${g.value}` };
     if (g.emoji) opt.emoji = parseEmoji(g.emoji);
     options.push(opt);
     if (options.length >= 25) break;
@@ -65,14 +65,16 @@ function buildMainOptions(db, vip, accessConfig) {
   const allFixed = buildSelectOptions(true);
   for (const o of allFixed) {
     if (!vip && isOptionVip(o.value, accessConfig)) continue;
-    options.push(o);
+    const noDesc = { label: o.label, value: o.value };
+    if (o.emoji) noDesc.emoji = o.emoji;
+    options.push(noDesc);
     if (options.length >= 25) break;
   }
 
   const customOpts = db.prepare('SELECT * FROM custom_options ORDER BY position ASC, id ASC').all();
   for (const o of customOpts) {
     if (!vip && o.vip_only) continue;
-    const opt = { label: o.label, value: `custom_${o.value}`, description: o.description };
+    const opt = { label: o.label, value: `custom_${o.value}` };
     if (o.emoji) {
       const m = o.emoji.match(/^<a?:(\w+):(\d+)>$/);
       opt.emoji = m ? { id: m[2], name: m[1], animated: o.emoji.startsWith('<a:') } : { name: o.emoji };
@@ -383,11 +385,11 @@ export async function execute(interaction, client) {
         }
 
         const subGlobalEmoji = getGlobalEmoji();
-        const subGlobalOpt = { label: 'Global', value: `subgrp_global__${groupValue}`, description: 'Recherche dans toutes les bases du groupe' };
+        const subGlobalOpt = { label: 'Global', value: `subgrp_global__${groupValue}` };
         if (subGlobalEmoji) subGlobalOpt.emoji = subGlobalEmoji;
 
         const subOptions = [subGlobalOpt, ...items.map(i => {
-          const opt = { label: i.label, value: `subgrp_${i.target_value}`, description: i.description ? i.description.substring(0, 100) : i.label };
+          const opt = { label: i.label, value: `subgrp_${i.target_value}` };
           if (i.emoji) opt.emoji = parseEmoji(i.emoji);
           return opt;
         })].slice(0, 25);

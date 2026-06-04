@@ -82,15 +82,13 @@ export async function handleGlobalSearch(interaction, query) {
   const hasToolResults = toolResults.some(r => r.results?.length > 0 || r.error);
 
   // Embed résumé global
+  const serviceCount = dbNames.length + toolResults.filter(r => r.results?.length > 0).length;
   const summaryEmbed = new EmbedBuilder()
     .setColor(totalResults > 0 ? 0x57f287 : 0xffa500)
-    .setTitle('🔍 Recherche Globale')
-    .setDescription(`Requête: \`${query}\``)
-    .addFields(
-      { name: '🗄️ Services DB',     value: `\`${dbNames.length}\``,                                     inline: true },
-      { name: '🔧 Tools externes',   value: `\`${toolResults.filter(r => r.results?.length > 0).length}\``, inline: true },
-      { name: '📊 Total résultats',  value: `\`${totalResults}\``,                                        inline: true },
-      { name: '💳 Crédits restants', value: creditsInfo.unlimited ? '♾️' : `\`${creditsInfo.credits}\``,  inline: true },
+    .setTitle('<:loupe:1510581015800709222> Recherche Global')
+    .setDescription(
+      `<:check:1512065393345171624> **${serviceCount}** Services\n` +
+      `<:dossier:1510580881679585390> **${totalResults}** Résultats`
     )
     .setTimestamp();
 
@@ -212,15 +210,14 @@ export async function handleGroupGlobalSearch(interaction, query, groupValue) {
   const grpLabel    = grp ? `${grp.emoji} ${grp.label}` : groupValue;
   const hasToolResults = toolResults.some(r => r.results?.length > 0 || r.error);
 
+  const serviceCount2 = resultDbKeys.length + toolResults.filter(r => r.results?.length > 0).length;
+  const grpLabelClean = grp ? grp.label : groupValue;
   const summaryEmbed = new EmbedBuilder()
     .setColor(totalResults > 0 ? 0x57f287 : 0xffa500)
-    .setTitle(`🔍 Recherche Globale — ${grpLabel}`)
-    .setDescription(`Requête: \`${query}\``)
-    .addFields(
-      { name: '🗄️ Services DB',     value: `\`${resultDbKeys.length}\``,                                  inline: true },
-      { name: '🔧 Tools externes',   value: `\`${toolResults.filter(r => r.results?.length > 0).length}\``, inline: true },
-      { name: '📊 Total résultats',  value: `\`${totalResults}\``,                                          inline: true },
-      { name: '💳 Crédits restants', value: creditsInfo.unlimited ? '♾️' : `\`${creditsInfo.credits}\``,   inline: true },
+    .setTitle(`<:loupe:1510581015800709222> Recherche ${grpLabelClean}`)
+    .setDescription(
+      `<:check:1512065393345171624> **${serviceCount2}** Services\n` +
+      `<:dossier:1510580881679585390> **${totalResults}** Résultats`
     )
     .setTimestamp();
 

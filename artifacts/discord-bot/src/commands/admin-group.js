@@ -58,6 +58,14 @@ export const data = new SlashCommandBuilder()
     .addStringOption(o => o.setName('cible').setDescription('Valeur cible de l\'élément (ex: db_sfr, email…)').setRequired(true))
     .addStringOption(o => o.setName('emoji').setDescription('Nouvel emoji (unicode ou <:nom:id>)').setRequired(true))
   )
+
+  .addSubcommand(sub => sub
+    .setName('set-emoji')
+    .setDescription('Modifier l\'emoji du groupe lui-même dans le menu principal')
+    .addStringOption(o => o.setName('valeur').setDescription('Identifiant du groupe (ex: operateurs)').setRequired(true))
+    .addStringOption(o => o.setName('emoji').setDescription('Nouvel emoji (unicode ou <:nom:id>)').setRequired(true))
+  )
+
   .addSubcommand(sub => sub
     .setName('list')
     .setDescription('Voir tous les groupes et leurs éléments')
@@ -235,6 +243,31 @@ export async function execute(interaction) {
           { name: '📂 Groupe', value: `${grp.emoji} ${grp.label}`, inline: true },
           { name: '🔤 Élément', value: item.label,                  inline: true },
           { name: '🎨 Emoji',   value: emoji,                       inline: true }
+        )
+        .setFooter({ text: 'S\'applique immédiatement au prochain clic.' }).setTimestamp()
+      ],
+      ephemeral: true
+    });
+  }
+
+  // ── SET-EMOJI (groupe principal) ───────────────────────────────────────────
+  if (sub === 'set-emoji') {
+    const valeur    = interaction.options.getString('valeur').toLowerCase();
+    const emoji     = interaction.options.getString('emoji').trim();
+
+    const grp = db.prepare('SELECT * FROM option_groups WHERE value = ?').get(valeur);
+    if (!grp) return interaction.reply({ content: `❌ Groupe \`${valeur}\` introuvable.`, ephemeral: true });
+
+    db.prepare('UPDATE option_groups SET emoji = ? WHERE value = ?').run(emoji, valeur);
+
+    return interaction.reply({
+      embeds: [new EmbedBuilder()
+        .setColor(0x57f287).setTitle('✅ Emoji du groupe mis à jour')
+        .setDescription(`L\'emoji du groupe **${grp.label}** dans le **menu principal** a été changé.`)
+        .addFields(
+          { name: '📂 Groupe',      value: `\`${valeur}\``,   inline: true },
+          { name: '🎨 Ancien emoji', value: grp.emoji || '*aucun*', inline: true },
+          { name: '✨ Nouvel emoji', value: emoji,             inline: true }
         )
         .setFooter({ text: 'S\'applique immédiatement au prochain clic.' }).setTimestamp()
       ],

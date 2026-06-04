@@ -763,14 +763,6 @@ export const GUIDE_PAGES = [
       '> 💡 Tu peux faire `/search deploy` dans plusieurs salons différents.',
       '> 💡 Personnalise l\'embed principal via `/embed set` et l\'embed info via `/search info-set`.',
       '',
-      '━━━━━━━━━━━━━━━━━━━━━━━',
-      '**🎉 Tu as terminé le guide !**',
-      '━━━━━━━━━━━━━━━━━━━━━━━',
-      'Utilise `/help` pour un rappel rapide des commandes.',
-      'Utilise `/guide` pour revenir à ce guide détaillé.',
-      'Utilise `/aide question:...` pour obtenir une réponse rapide sur n\'importe quel sujet.',
-      '',
-      '> Si tu as des questions ou souhaites ajouter des fonctionnalités, contacte l\'équipe de développement.',
     ].join('\n')
   },
 
@@ -905,6 +897,15 @@ export const GUIDE_PAGES = [
       '/logs-bot remove',
       '```',
       'Enregistre toutes les actions admin dans un salon (excl. /guide /help /aide /statut-logs /search-logs).',
+      '',
+      '━━━━━━━━━━━━━━━━━━━━━━━',
+      '**🎉 Tu as terminé le guide !**',
+      '━━━━━━━━━━━━━━━━━━━━━━━',
+      'Utilise `/help` pour un rappel rapide des commandes.',
+      'Utilise `/guide` pour revenir à ce guide détaillé.',
+      'Utilise `/aide question:...` pour obtenir une réponse rapide sur n\'importe quel sujet.',
+      '',
+      '> Si tu as des questions ou souhaites ajouter des fonctionnalités, contacte l\'équipe de développement.',
     ].join('\n')
   },
 ];
