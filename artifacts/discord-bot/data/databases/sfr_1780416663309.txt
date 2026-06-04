@@ -1,0 +1,313 @@
+Tout les log on etait check est leak par 
+ (drop 1h avent leak sur les groupe)
+
+
+karinehamelin@sfr.fr:Dorine30240@ | Status = PROSPECT
+didier.orhon@sfr.fr:gv10lm41 | 
+laurentbardy@sfr.fr:Lolo4537. | Status = PROSPECT
+lemeurjeanclaude@sfr.fr:Anikou71 | Status = PROSPECT
+flairat@sfr.fr:Xk231695 | 
+lucasberaud@sfr.fr:toplay16 | Status = TERMINATED | Operator = SFR | offerType = 2P
+tony.tisserand@sfr.fr:Tonytony54 | Status = TERMINATED | Operator = SFR | offerType = 2P
+philippechanu@sfr.fr:Emeline57 | Status = TERMINATED | Operator = SFR | offerType = 2P
+jeanbaptiste.couturier@sfr.fr:JcO49478 | Status = TERMINATED | Operator = SFR | offerType = 2P
+vanessa.saintpaul@sfr.fr:soleil27 | Status = TERMINATED | Operator = SFR | offerType = 2P
+shadow-phoenix@sfr.fr:diablo666 | Status = TERMINATED | Operator = SFR | offerType = 2P
+audrey-johnny.pincellotti@sfr.fr:Johnny1402 | Status = PROSPECT | Operator = OTT
+xaviereudeline@sfr.fr:xavier1STMG1 | 
+coraliedescamps02@sfr.fr:elune29072009 | Status = PROSPECT
+alexandra.hernandes@sfr.fr:sandra123 | Status = PROSPECT
+marcandrieux5@sfr.fr:aertdfcv | Status = TERMINATED | Operator = SFR | offerType = 2P
+soulieeric@sfr.fr:tgvave01 | Status = PROSPECT
+christian_fr@sfr.fr:Chri2266 | 
+ionelmistral@sfr.fr:isabel30 | 
+frederic.lengy@sfr.fr:18122010Vk | Status = PROSPECT
+christian.rossoni@sfr.fr:Carter31470@ | Status = TERMINATED | Operator = SFR | offerType = 2P
+dacostad@sfr.fr:2PBD8W | Status = PROSPECT
+anis.aissa12@sfr.fr:Aissa1976 | Status = TERMINATED | Operator = SFR | offerType = 2P
+jeanmichelchapelier@sfr.fr:Nathalie62400 | 
+wistitiz@sfr.fr:friterie | Status = PROSPECT
+lionel.laurent85@sfr.fr:lionel02150 | Status = PROSPECT
+murie.wendling@sfr.fr:101169 | Status = PROSPECT
+serny.caron@sfr.fr:Porsche56 | 
+seveduplaquet@sfr.fr:Seve970204 | 
+araai@sfr.fr:Probook2020 | Status = TERMINATED | Operator = SFR | offerType = 2P
+rodolphezaino@sfr.fr:lalune | Status = PROSPECT
+myriam.pelhate@sfr.fr:gouget76 | 
+nflamengo@sfr.fr:alexandre07 | Status = PROSPECT
+jacques.du-mont@sfr.fr:lesetesperdus | Status = PROSPECT
+illu.sarl@sfr.fr:ERIC55 | Status = PROSPECT
+ahmadismailalhzzoury@sfr.fr:Moustafa22 | Status = PROSPECT
+severine.bernadicou@sfr.fr:teonoa64 | 
+mariechristine.maire97@sfr.fr:udvt49RU | Status = TERMINATED | Operator = SFR | offerType = 2P
+kevin.maya@sfr.fr:Zz1zz1zz1 | 
+keayna@sfr.fr:poopsie | Status = PROSPECT
+calimeronette@sfr.fr:heroine | 
+fatima.moreira99@sfr.fr:LAdi1987fr | Status = TERMINATED | Operator = SFR | offerType = 2P
+teddyblueone@sfr.fr:xujjso | Status = PROSPECT
+tomeimarion@sfr.fr:hugo99 | Status = PROSPECT
+florian.peysson@sfr.fr:papiercul | Status = PROSPECT
+kekep38@sfr.fr:apache | Status = PROSPECT
+neymondan.restasi@sfr.fr:alirestasi | Status = SUSPENDED | Operator = SFR | offerType = 2P
+zora.krifah@sfr.fr:sultan69 | Status = PROSPECT
+stephanie.laot@sfr.fr:04082006 | Status = PROSPECT
+kevin.andrieu@sfr.fr:Ileane211105 | Status = PROSPECT
+jennifer.gabillard@sfr.fr:jenny0127 | 
+samibenjima@sfr.fr:Biche#7919 | 
+francoisbaudon@sfr.fr:spOOky1981! | 
+quentin.fichet2005@sfr.fr:ronaldo79 | 
+isabellehelene.bladt@sfr.fr:Isabelle07 | Status = PROSPECT
+enzo.casuccio@sfr.fr:459398 | Status = TERMINATED | Operator = SFR | offerType = 2P
+michel.dumont10@sfr.fr:Theo2606 | 
+gordanailic@sfr.fr:Wqazsxcd1 | 
+berardst@sfr.fr:takamaka | 
+nicofunaro@sfr.fr:funaro | Status = PROSPECT
+marithe.bernabeu@sfr.fr:Salade0356 | Status = PROSPECT
+cherqinoureddine@sfr.fr:06091977 | 
+christellecamicas@sfr.fr:jessica | Status = PROSPECT
+daniel.vogt@sfr.fr:PICASSOS | Status = PROSPECT
+jerome.quay@sfr.fr:julie1987 | Status = PROSPECT
+florian.lepicier@sfr.fr:Vinisa247 | Status = PROSPECT | Operator = SFR
+niryrazakazafy@sfr.fr:faniry | 
+lisa.schaffhauser@sfr.fr:lisa1986 | Status = PROSPECT
+aurore.sauval@sfr.fr:pioute | Status = TERMINATED | Operator = SFR | offerType = 2P
+xmaillard@sfr.fr:Cal1m3r0 | Status = PROSPECT
+franck.dzikowski@sfr.fr:massai65 | Status = TERMINATED | Operator = SFR | offerType = 2P
+bertrandbariller@sfr.fr:smokey | Status = PROSPECT
+marc.albert16@sfr.fr:nvyrscyp | Status = PROSPECT
+a.fredericque@sfr.fr:liberte | 
+dounia.contact@sfr.fr:DouniA72 | Status = PROSPECT
+david.stefanelly@sfr.fr:Ds02021976 | 
+andre.cailleau@sfr.fr:Sweety00 | 
+nini.gimenez@sfr.fr:nini34560 | Status = PROSPECT
+josefarias34500@sfr.fr:jfmistral3401 | Status = PROSPECT
+soniaplayy@sfr.fr:sanajtm | 
+pion.yves@sfr.fr:Metecos974 | Status = TERMINATED | Operator = SRR | offerType = 2P
+thierry.paquet24@sfr.fr:soleil75 | Status = PROSPECT
+abdelilah.basaoud@sfr.fr:csmv12LA | Status = TERMINATED | Operator = SFR | offerType = 2P
+romeoviar@sfr.fr:charlotte60660 | 
+jmartinjc17@sfr.fr:Vangogh49 | Status = TERMINATED | Operator = SFR | offerType = 2P
+valentin.jovelin@sfr.fr:Valou1998 | Status = TERMINATED | Operator = SFR | offerType = 2P
+estelle.chapon@sfr.fr:ODY12sseus | Status = PROSPECT
+didier.ghacham@sfr.fr:911neverforget | 
+jean-michel.ryngaert@sfr.fr:LOSC1966 | Status = PROSPECT
+g.coutelle@sfr.fr:copain28 | 
+virginie.sauvat@sfr.fr:VIRGINIE | Status = PROSPECT
+noel50@sfr.fr:pomme50 | 
+zodiac344@sfr.fr:94469446 | 
+bernardlaurent191@sfr.fr:Waddle30500 | Status = PROSPECT | Operator = SFR
+neff.angelique@sfr.fr:Lucie130178 | Status = TERMINATED | Operator = SFR | offerType = 2P
+softmelizi@sfr.fr:amoure | 
+kd5566@sfr.fr:marfra | Status = PROSPECT
+shuhratkhashimov@sfr.fr:Ozod2010 | 
+bmambule@sfr.fr:elysee | Status = PROSPECT
+mirellafessier@sfr.fr:1022765 | 
+fassi.silvia@sfr.fr:mulu50FE | 
+lucile.richard@sfr.fr:Lucile.03 | Status = PROSPECT
+catherinebattu@sfr.fr:lana30082011 | Status = PROSPECT
+laurent.masson57@sfr.fr:Maison/80 | Status = PROSPECT
+marlouchfr@sfr.fr:0608seez | 
+mathieu.carpentier72@sfr.fr:Malcomdu06130 | Status = PROSPECT
+morgan.same@sfr.fr:20A12e13 | Status = TERMINATED | Operator = SFR | offerType = 2P
+missy6222006@sfr.fr:c0y2g4n6e8s8 | 
+clementesnard@sfr.fr:Samoth951 | 
+michaeldurrenberger@sfr.fr:Md090886 | 
+marc.daubercies@sfr.fr:Calibrage2017 | Status = PROSPECT
+sablw@sfr.fr:gerleo | Status = PROSPECT
+mickadudon@sfr.fr:060316 | 
+saoudi.myriam@sfr.fr:symeka | Status = TERMINATED | Operator = SFR | offerType = 2P
+ruic@sfr.fr:lobitango | Status = PROSPECT
+mlemp@sfr.fr:yodasith95 | 
+ritaplace@sfr.fr:281024 | 
+gico83470@sfr.fr:2817911 | 
+ptite-lionne@sfr.fr:baxter19062010 | Status = PROSPECT
+annelaurelepeillet@sfr.fr:calinette | Status = PROSPECT
+rporret@sfr.fr:qsecofr | Status = PROSPECT
+thierry.vermote@sfr.fr:03071974 | Status = PROSPECT
+maevaitchner@sfr.fr:041187 | 
+delphinegrimal@sfr.fr:160710 | Status = PROSPECT
+cedric.miniama@sfr.fr:madonna1982 | Status = PROSPECT
+pj.benezeth@sfr.fr:Martin1162 | Status = PROSPECT
+rotier.jean-pierre@sfr.fr:0241439843 | 
+florencethierrard@sfr.fr:Florence017 | 
+tascituncay@sfr.fr:06111974 | Status = PROSPECT
+ginev@sfr.fr:emilia03 | Status = PROSPECT
+ophelyraymond@sfr.fr:180880 | Status = PROSPECT
+fanny.lavenus@sfr.fr:Deletang02 | 
+dracodi@sfr.fr:74en45ot | Status = PROSPECT
+adriendeleplace@sfr.fr:Tegc6uw59121 | Status = TERMINATED | Operator = SFR | offerType = 2P
+sylviane.glodt@sfr.fr:sissi17 | Status = PROSPECT
+pimorflorence@sfr.fr:fpimor | Status = PROSPECT
+horacio.paulino@sfr.fr:13121978 | Status = PROSPECT
+valerie.desain@sfr.fr:Wolf59700 | Status = TERMINATED | Operator = SFR | offerType = 2P
+bassonville.richard@sfr.fr:entreprise14 | 
+ko1000fo@sfr.fr:tarzan | 
+patrice.negrie@sfr.fr:leaneg01 | 
+juliengurrea@sfr.fr:Julien84 | Status = TERMINATED | Operator = SFR | offerType = 2P
+joanna.elmajidi@sfr.fr:amoura | 
+steffi014@sfr.fr:jadorenoel2 | Status = PROSPECT
+delmontceline@sfr.fr:Bourboule63 | Status = TERMINATED | Operator = SFR | offerType = 2P
+laury.carette@sfr.fr:maman8686 | Status = TERMINATED | Operator = SFR | offerType = 2P
+cedricmoy-pub@sfr.fr:SOL667eil | 
+arnaud.szybura@sfr.fr:Az23081981 | 
+sbariani@sfr.fr:basile | 
+nanoucapde@sfr.fr:nanou1967 | 
+franck.musart@sfr.fr:camille33 | 
+thomas.tridon@sfr.fr:magicien | Status = PROSPECT
+wacogne_mickael@sfr.fr:122872wa | Status = PROSPECT
+artbang@sfr.fr:atelier1221218 | Status = PROSPECT
+edithk49@sfr.fr:150363 | Status = PROSPECT
+ylann.mamane@sfr.fr:couscous | Status = PROSPECT
+judrancourt@sfr.fr:0670532096 | Status = PROSPECT
+dominiquedusfour@sfr.fr:slimslim | 
+romann.biou@sfr.fr:X260895x | Status = TERMINATED | Operator = SFR | offerType = 2P
+sratte@sfr.fr:Pkonywqa81 | Status = PROSPECT
+suzanne.robin@sfr.fr:caravelle | Status = PROSPECT
+amliebump@sfr.fr:61386138 | Status = PROSPECT
+tigre-57@sfr.fr:doudoune | Status = PROSPECT
+btaillefumier@sfr.fr:olitec02340 | Status = TERMINATED | Operator = SFR | offerType = 2P
+mahamaneboite@sfr.fr:bintab | 
+sebvisto@sfr.fr:110280 | 
+dolazaza@sfr.fr:glodylolo | Status = PROSPECT
+elise.fournaise@sfr.fr:paradisus | 
+pepspoune@sfr.fr:camionjaune | Status = PROSPECT
+zengzhe@sfr.fr:873100 | Status = PROSPECT
+stephane_aussant@sfr.fr:sacha794 | 
+vincentrolhion@sfr.fr:Ferocis1 | 
+c.chouquady@sfr.fr:starwars1789 | 
+al.kathya@sfr.fr:Dydo7831 | Status = PROSPECT
+fred.baldet@sfr.fr:rc7aa535 | Status = PROSPECT
+rbobzen@sfr.fr:SOLEIL2012 | Status = PROSPECT
+seb001987@sfr.fr:001987 | 
+abrialsandrine@sfr.fr:leabaptiste | Status = PROSPECT
+lil_doggy@sfr.fr:Willou240 | Status = PROSPECT
+fififou@sfr.fr:123azeQSD | Status = PROSPECT
+didier.guinee@sfr.fr:502686 | 
+mfreymi@sfr.fr:karine | 
+jojoe21@sfr.fr:clemence | 
+lrotilio@sfr.fr:007807 | 
+habibou91@sfr.fr:080782 | 
+direnzoh@sfr.fr:compaq | Status = PROSPECT
+angelique.riaudel@sfr.fr:Julien2212 | 
+derbel.mourad@sfr.fr:qsdfghjkl0101 | Status = PROSPECT
+rosalie.babillotte@sfr.fr:cheval67 | 
+lobo.stephanie@sfr.fr:Esteban63 | Status = PROSPECT | Operator = SFR
+cresson.christopher@sfr.fr:adelina | Status = PROSPECT
+nicole.legros99@sfr.fr:Sandrine21 | Status = TERMINATED | Operator = SFR | offerType = 2P
+guigues67@sfr.fr:bigboss67 | Status = PROSPECT
+nat.pil@sfr.fr:Thabora040171! | Status = PROSPECT
+armand.frebault@sfr.fr:armand86 | 
+zacharie.malan@sfr.fr:Benjuzach3 | Status = TERMINATED | Operator = SFR | offerType = 2P
+vincentmad@sfr.fr:patates84 | Status = PROSPECT
+cbouchereau@sfr.fr:madeotristeo | Status = PROSPECT
+mario.fernandes1@sfr.fr:27mario56 | Status = PROSPECT
+morgane.hecky@sfr.fr:thestr0kes | Status = PROSPECT
+amarie.blanchard@sfr.fr:doudou | Status = PROSPECT
+goulven.lepensec@sfr.fr:Lef00t56 | Status = TERMINATED | Operator = SFR | offerType = 2P
+scourtau@sfr.fr:pepette | Status = PROSPECT
+alex.92230@sfr.fr:kiriluth92 | Status = PROSPECT
+xavier.jaulin@sfr.fr:kyllian32 | Status = PROSPECT
+hug.lefeuvre@sfr.fr:stelmer44 | Status = PROSPECT
+alaindufour03@sfr.fr:lucas2906 | Status = PROSPECT
+emilien.bouton@sfr.fr:Emilien41 | 
+fabienpergaud@sfr.fr:sheeper27 | 
+fredericjouchter@sfr.fr:020874 | Status = PROSPECT
+jeanvalere.luciani@sfr.fr:sidossi0201 | 
+patgiry@sfr.fr:nuage87 | 
+mariette.larreur@sfr.fr:Pilou1935 | Status = TERMINATED | Operator = SFR | offerType = 2P
+karimhamoudi@sfr.fr:linakaci1 | 
+patrickdebrou@sfr.fr:15320Leo | 
+guy.hoedts@sfr.fr:91440cee | Status = PROSPECT
+okchilajim7@sfr.fr:lakotas7 | Status = PROSPECT
+catherineyann@sfr.fr:586583 | Status = PROSPECT
+ludoviclucea@sfr.fr:gwadada | 
+nelly.mdm@sfr.fr:noisette40 | 
+jeremy.delcourte@sfr.fr:Ch4b0t1n | Status = PROSPECT
+towouwou@sfr.fr:tantine | Status = PROSPECT
+chrystelferry@sfr.fr:Cf281288 | 
+piquard_vincent@sfr.fr:DOROTA | Status = PROSPECT
+anne.salvio@sfr.fr:baptiste | 
+sodivem@sfr.fr:003345 | Status = PROSPECT
+pennazzo.sophie@sfr.fr:Maxmay02 | Status = PROSPECT
+josebolivar@sfr.fr:scaniar620 | Status = PROSPECT
+blue_bird@sfr.fr:005834 | Status = PROSPECT
+xjubert@sfr.fr:Roxane10 | Status = TERMINATED | Operator = SFR | offerType = 2P
+alex3001@sfr.fr:lolo27150 | 
+vfraulin@sfr.fr:31081996 | 
+virginie.tailler@sfr.fr:nini0107 | 
+frederic.piallat@sfr.fr:joebarteam | Status = PROSPECT
+flaesch.gregory@sfr.fr:Altair133 | Status = PROSPECT
+jfs.33@sfr.fr:a7zr2zk | Status = PROSPECT
+ericfischer1965@sfr.fr:bichon1965 | Status = PROSPECT
+christian.louet01@sfr.fr:planchex | Status = PROSPECT
+micheline.aioun@sfr.fr:0205ezia09 | 
+fevrier.sylvain@sfr.fr:System_49 | Status = TERMINATED | Operator = SFR | offerType = 2P
+bsofiane06@sfr.fr:sidiaich | Status = PROSPECT
+amas.amandine@sfr.fr:bibrun | Status = PROSPECT
+tiramisu91@sfr.fr:19tiramisu52 | 
+zxp31@sfr.fr:61628793 | 
+elisa.tairou@sfr.fr:Abiodoun2003 | Status = SUSPENDED | Operator = SFR | offerType = 2P
+lily-emilie-60@sfr.fr:zaza95 | Status = PROSPECT
+mihaelos75@sfr.fr:gabriela | Status = PROSPECT
+mieldupaysdelellez@sfr.fr:leacoon | Status = PROSPECT
+francismaye@sfr.fr:020466 | 
+vbarraco@sfr.fr:violoncelle | Status = PROSPECT | Operator = SFR
+bellouk@sfr.fr:08241976 | Status = PROSPECT
+emmanuel.taffein@sfr.fr:jpt59NT49 | Status = PROSPECT
+ykalfayan@sfr.fr:jka57fi4 | 
+rondeau.nathan@sfr.fr:Solex3800 | 
+jeffy.michee@sfr.fr:bagneux | Status = PROSPECT
+kamalmuf@sfr.fr:shenaz | Status = PROSPECT
+nanie26niort@sfr.fr:etoile26 | Status = PROSPECT
+tiziridjeg@sfr.fr:anirbas | Status = PROSPECT
+eric.vivier2@sfr.fr:eric1502 | 
+martinandy65700@sfr.fr:dany73 | 
+mrizakb@sfr.fr:saltorude | Status = PROSPECT
+agathecochin@sfr.fr:Sebagathe7 | Status = TERMINATED | Operator = SFR | offerType = 2P
+sylvie.pierreloget@sfr.fr:123456 | 
+sfattaamrane@sfr.fr:s241269a | Status = PROSPECT | Operator = SFR
+christian.gibert35@sfr.fr:fernandel26 | Status = PROSPECT
+aziza.sukkarieh@sfr.fr:12052016 | 
+adrienekoue@sfr.fr:Ayi067260 | 
+pilorgetjacky@sfr.fr:26915031 | Status = PROSPECT
+raphael.ruban@sfr.fr:Didi3509 | Status = PROSPECT
+josia26@sfr.fr:josianne | 
+naneloudiyi@sfr.fr:sonosa03 | 
+henri.fousse@sfr.fr:marduke | Status = PROSPECT
+jovanogiuli@sfr.fr:cristal12 | Status = PROSPECT
+tisskamel@sfr.fr:647011 | 
+vincedax@sfr.fr:pampara | Status = PROSPECT
+copileroy@sfr.fr:copilomaje | Status = PROSPECT
+magictophe@sfr.fr:doberman | Status = PROSPECT
+victoiredevilmorin@sfr.fr:60118312 | Status = TERMINATED | Operator = SFR | offerType = 2P
+pepermint23@sfr.fr:shampoo1 | Status = PROSPECT
+christelle.vasconcelos@sfr.fr:Zezette74 | 
+allsonsimon@sfr.fr:Alourdes67 | 
+vaisseb@sfr.fr:bretagne | 
+mric83@sfr.fr:160679 | Status = PROSPECT
+mario.pires50@sfr.fr:Meu05091972 | Status = TERMINATED | Operator = SFR | offerType = 2P
+cnsiangani@sfr.fr:0633542422 | 
+melaniest@sfr.fr:27061988 | 
+liberation76@sfr.fr:Philippe1952 | 
+stwintzer@sfr.fr:wintzer | Status = PROSPECT
+angeltanzey@sfr.fr:sablier3 | Status = PROSPECT
+the_arnaud@sfr.fr:126512 | Status = PROSPECT
+rikore1@sfr.fr:dekolm61 | Status = PROSPECT
+cecjamet@sfr.fr:pierrot | 
+cedric.chaumarat@sfr.fr:cedric1912 | Status = TERMINATED | Operator = SFR | offerType = 2P
+domingo_marin@sfr.fr:jeetkunedo | Status = PROSPECT
+julie.echelard@sfr.fr:julie1983 | Status = PROSPECT
+eliseduboc@sfr.fr:qhdm04FX | 
+nrikfernandes@sfr.fr:Internet76 | Status = TERMINATED | Operator = SFR | offerType = 2P
+jeph31@sfr.fr:hoggar888 | 
+frounzy@sfr.fr:babaorhum | Status = PROSPECT
+ts14@sfr.fr:Moiu1994 | Status = PROSPECT
+alexandregaafer@sfr.fr:azert2006 | Status = PROSPECT
+c.wilhelm54@sfr.fr:anne6465 | 
+titesam44@sfr.fr:0240537175 | Status = PROSPECT
+ocercle@sfr.fr:ocercle | Status = PROSPECT
+latifa.clary@sfr.fr:121062 | Status = TERMINATED | Operator = SFR | offerType = 2P
+liochet@sfr.fr:LEONCE26 | Status = PROSPECT
+ingrid.rimbaud@sfr.fr:soleil13 | 
+julien-lombard@sfr.fr:julien | Status = PROSPECT
+electron28000@sfr.fr:electron | Status = TERMINATED | Operator = SFR | offerType = 2P

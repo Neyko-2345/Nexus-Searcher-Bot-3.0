@@ -1,0 +1,33 @@
+le refrech des credit etc ensuite le nombre de recherche faite sur le serv et ensuite un petit message qui dis pour change ton plans obtenir un accès illimitée et d'autre fonctions vip il te suffit d'ouvrir un ticket sur le serveur pour contactez un owner ensuite met que l'embed il peut etre modifier a tout moment par commande et que le bouton peut etre desactiver de l'embed search a tout moment aussj comme reactiver etc par les owner du bot ensuite pareil. Rajoute un autre bouton gris avec sans label juste un emojie :   <a:ZippyRiri_Utility:1511875310302265414> avec cette fois pareil un embed ( les deux embed s'envoie ephemere ) qui fait guide pour les utilisateur donc qui affiche comment utiliser le bot comme un peu la commande /info donc c'est modifiable pareil a tout moment avec une commande owner et pour la modif des embed met a dispositon tout les variable disponible dans cette embed pour que le bot renvoie quelque chose par exemple pour l'embed dj bouton profil les variable qui sevent a afficher le nom du plan le nombre de credit etc etc met c'est commande dans la mm catégories jsp trouve . Ensuite pour le bouton de base pour faire des recherche et lancer le select menue avec les options etc etc change l'emojie met : <:rechercher:1511875326655856660> et change le label met juste Rechercher et met que pour lui aussi on peut changer label et emojie et couleur du bouton a tout moment donc pareil mm categories de commande et seulement owner du bot . 
+ D'ailleur pour tout les embed ou par exemple embed /owner list sa met en dessous les owner on acces au commende / .... beh actualise les owner on acces a quoi avec tout les / par categories de commande exemple /bot /owner Actualise tout les embed comme sa ou il y a des truc dis qui suivent pas vraiment la realiter dis moi tu compte modifier quoi avant de le faire hyn comme pour tout .
+ Ajoute un nouveau group place en derniere position dans le select menue tu met ULP et dans le select menue du group tu met 3 option L0gin / Email pour rechercher par login ou email ensuite Passw0rd pour rechercher par mot de passe  ensuite URL pour rechercher par url  exemple l'url facebook et biensur en haut l'option global on poura modif les emojie des option les acces dans les group et du group dans le select menue de base fin tout comme les autre mais en gros elle sert pour les db comme facebook par exemple ou amazon ou par exemple il y a un login ou un email un mot de passe et un url pour se login au compte en gros les embed des resultat sa marche comme les autre group ou autre options embed avec le nombre de resultat le nombre de service etc et suivis d'embed par resultat dans db si il recherche avec que un email attention il faut pas que sa mettent les mm resultat que pour l'option email ou les autre la c'est pas pareil le bot prend en cpte et verifie les data il faut que sa soit des db de ulp ducoup comme je t'es dis qui donne accès a des compte donc dans la db un email suivie de mot de passe ou login suivie de mot de passe etc et biensur l'url, modifie d'autre truc etc si nessecaire pour suivre le systeme comme il faut on poura mofi l'embed du group etc etc comme le reste. quand on add des db il faut pas forcement precisser que cv dans ulp justement le bot dois bien trier tout les resultat etc bien traiter tout lors des recherche pour afficher les bon resultat etc comme je te dis depuis le debut . 
+ Maintenant modifie pour les export de resultat les fichier export texte doivent toujours commencer par :
+"███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗
+████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝
+██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗
+██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║
+██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║
+╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+serveur link : https://discord.gg/3zYCDcRpuv
+recherche faite : ( beh ducoup ici la recherche effectuer par l'utilisateur)"
+
+voila pour le haut du fichier 
+et ensuite mettre les resultat avec les champ etc par exemple : "--- Résultat ---
+civilite: M
+prenom: KYLIAN
+nom: BLANGIER
+date_naissance: 2009-05-19T00:00:00.000+02:00
+situation: Jeune
+parent_civilite: MME
+parent_nom: GONDAL
+parent_prenom: ELODIE
+parent_telephone: 0659381690
+parent_email: ELODIE.GONDAL@GMAIL.COM
+parent_matricule: 0390460
+adresse: 24 AVENUE DU 19 MARS 1962 NOTRE DAME DE SANILHAC
+ville: SANILHAC
+code_postal: 24660
+creation: 2022-09-01T00:00:00.000+02:00" sa sera peut être des champ diferent selon les recherche mais le bot dois comprendre les resultat en creer des champ et les remplir pour chaque resultat associer au champ par exemple recherche ulp beh le resultat doit avoir champ login / email, mot de passe, et url tu comprend .
+ Rajoute les logs des export des résultat dans le mm salon que les logs des recherche des membres . 
+ 
+TRAITE TOUTE MES DEMANDE UNE PAR UNE OUBLIE RIEN DANS MON MESSAGE LIS MOT PAR MOT PHRASE PAR PHRASE POUR TOUT TOUT BIEN PRENDRE EN COMPTE AVANT DE LE FAIRE ET PENSE A LA FIN A ACTUALISER TOUT LES COMMANDE /guide /help et /aide avec les nouveau ajout etc si nécessaire ET PAUSE MOI DES QUESTION AVANT DE LANCER LES MODIFE SI JAMAIS TU A BESOIN DE PLUS DE RENSEIGNEMENT POUR QUE SA SOIT PARFAIT 
