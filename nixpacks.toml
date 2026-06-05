@@ -1,10 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs_22"]
+nixPkgs = ["nodejs_22", "nodePackages.pnpm"]
 
 [phases.install]
-cmds = [
-  "npm install -g pnpm@latest && pnpm install --no-frozen-lockfile"
-]
+cmds = ["pnpm install --no-frozen-lockfile"]
 
 [start]
 cmd = "node artifacts/discord-bot/src/index.js"
