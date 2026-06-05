@@ -303,6 +303,25 @@ export async function execute(interaction, client) {
         });
       }
 
+      // Status gating — if statut system active and user doesn't have the role
+      const statusCfg = getStatusConfig(db);
+      if (statusCfg && !interaction.member.roles.cache.has(statusCfg.role_id)) {
+        return interaction.reply({
+          embeds: [new EmbedBuilder()
+            .setColor(0xed4245)
+            .setTitle('🔒 Accès refusé')
+            .setDescription(
+              `Tu n'as pas accès aux recherches.\n\n` +
+              `**Pour obtenir l'accès :**\n` +
+              `> Ajoute **\`${statusCfg.text}\`** dans ton **statut personnalisé Discord**.\n\n` +
+              `Le rôle te sera attribué automatiquement une fois le statut détecté.`
+            )
+            .setFooter({ text: 'Discord → Ton profil → Paramètres → Statut personnalisé' })
+          ],
+          ephemeral: true
+        });
+      }
+
       const vip          = isVipOrAdmin(interaction.member);
       const accessConfig = getAccessConfig(db);
       const allOptions   = buildMainOptions(db, vip, accessConfig);
@@ -351,6 +370,27 @@ export async function execute(interaction, client) {
 
     if (interaction.customId.startsWith('guide_page_')) {
       return interaction.deferUpdate();
+    }
+
+    // User history pagination buttons
+    if (interaction.customId.startsWith('uhist_')) {
+      const parts = interaction.customId.split('_');
+      const dir   = parts[1];
+      if (dir === 'info') return interaction.deferUpdate();
+
+      const targetUserId = parts[2];
+      const currentPage  = parseInt(parts[3], 10);
+      const newPage      = dir === 'next' ? currentPage + 1 : currentPage - 1;
+
+      const db    = getDB();
+      const total = db.prepare('SELECT COUNT(*) as cnt FROM search_logs WHERE user_id = ?').get(targetUserId)?.cnt ?? 0;
+      if (newPage < 1 || newPage > total) return interaction.deferUpdate();
+
+      const usernameRow = db.prepare('SELECT user_tag FROM search_logs WHERE user_id = ? LIMIT 1').get(targetUserId);
+      const username    = usernameRow?.user_tag || targetUserId;
+
+      const { embed, btnRow } = buildUserHistoryPage(db, targetUserId, username, newPage, total);
+      return interaction.update({ embeds: [embed], components: [btnRow] });
     }
 
     // Export buttons

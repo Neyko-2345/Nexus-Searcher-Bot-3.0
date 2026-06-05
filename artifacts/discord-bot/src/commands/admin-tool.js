@@ -407,7 +407,17 @@ export async function execute(interaction) {
         { name: '⚙️ Type',     value: `\`${tool.type}\``,        inline: true },
         { name: '🌐 Scope',    value: `\`${tool.scope}\``,       inline: true },
         { name: '🔍 Requêtes', value: types.map(t => `\`${t}\``).join(' ') || '`global`', inline: false },
-        { name: '🔗 Lié à',   value: links.length > 0 ? links.map(l => `\`${l.option_value}\``).join(', ') : '*(toutes les recherches)*', inline: false },
+        { name: '🔗 Lié à',   value: links.length > 0 ? links.map(l => `\`${l.option_value}\``).join(', ') : '*(aucun filtre — toutes les recherches)*', inline: false },
+        {
+          name: '🔓 Non lié à',
+          value: (() => {
+            const ALL_OPTIONS = ['global','email','phone','name','username','discord_id','ip','address','iban','password','intelx','nazapi','login','ulp_password','url'];
+            const linkedSet = new Set(links.map(l => l.option_value));
+            const unlinked  = ALL_OPTIONS.filter(o => !linkedSet.has(o));
+            return links.length === 0 ? '*Ce tool répond à toutes les options*' : (unlinked.length > 0 ? unlinked.map(o => `\`${o}\``).join(', ') : '*Aucune — lié à tout*');
+          })(),
+          inline: false
+        },
         { name: '📅 Ajouté',  value: tool.added_at || 'Inconnu', inline: true },
       )
       .setTimestamp();

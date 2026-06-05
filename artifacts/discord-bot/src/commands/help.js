@@ -45,6 +45,7 @@ const COMMANDS = [
     adminOnly: true,
     cmds: [
       { name: '/group create',      usage: '/group create valeur:operateurs label:Opérateurs emoji:📱',      desc: 'Crée un groupe. Dans le menu principal il ouvre un sous-menu.' },
+      { name: '/group set-emoji',   usage: '/group set-emoji valeur:operateurs emoji:📱',                    desc: 'Change l\'emoji du groupe tel qu\'il apparaît dans le menu principal.' },
       { name: '/group config',      usage: '/group config valeur:operateurs titre:... couleur:#5865f2',       desc: 'Personnalise l\'embed du sous-menu du groupe (titre, description, couleur, thumbnail).' },
       { name: '/group add',         usage: '/group add groupe:operateurs cible:db_sfr label:SFR emoji:📱',    desc: 'Ajoute un élément dans le groupe. La cible peut être db_sfr, email, custom_steam…' },
       { name: '/group emoji',       usage: '/group emoji groupe:operateurs cible:db_sfr emoji:📱',            desc: 'Modifie l\'emoji d\'un élément existant dans le sous-menu d\'un groupe.' },
@@ -115,12 +116,13 @@ const COMMANDS = [
     category: '📋 Logs de recherche — `/logs`',
     adminOnly: true,
     cmds: [
-      { name: '/logs setup',   usage: '/logs setup salon:#logs',                                                                                         desc: 'Active les logs dans un salon. Chaque recherche y envoie un embed.' },
-      { name: '/logs disable', usage: '/logs disable',                                                                                                   desc: 'Désactive les logs.' },
-      { name: '/logs status',  usage: '/logs status',                                                                                                    desc: 'Voir si les logs sont actifs et dans quel salon.' },
-      { name: '/logs history', usage: '/logs history nombre:10 utilisateur:@Dupont',                                                                     desc: 'Voir les N dernières recherches, avec filtre optionnel par utilisateur.' },
-      { name: '/logs search',  usage: '/logs search mot_cle:gmail.com utilisateur:@Dupont option:email depuis:2025-01-01 jusqua:2025-12-31 limite:20',  desc: 'Rechercher dans les logs avec filtres : mot-clé, utilisateur, type d\'option, période.' },
-      { name: '/logs clear',   usage: '/logs clear',                                                                                                     desc: 'Supprime tous les logs de recherche enregistrés.' }
+      { name: '/logs setup',        usage: '/logs setup salon:#logs',                                                                                        desc: 'Active les logs dans un salon. Chaque recherche y envoie un embed.' },
+      { name: '/logs disable',      usage: '/logs disable',                                                                                                  desc: 'Désactive les logs.' },
+      { name: '/logs status',       usage: '/logs status',                                                                                                   desc: 'Voir si les logs sont actifs et dans quel salon.' },
+      { name: '/logs history',      usage: '/logs history nombre:10 utilisateur:@Dupont',                                                                    desc: 'Voir les N dernières recherches, avec filtre optionnel par utilisateur.' },
+      { name: '/logs user-history', usage: '/logs user-history utilisateur:@Dupont',                                                                         desc: 'Historique complet d\'un membre — paginé (1 page = 1 recherche). Titre : Historique de [membre] • 1/N.' },
+      { name: '/logs search',       usage: '/logs search mot_cle:gmail.com utilisateur:@Dupont option:email depuis:2025-01-01 jusqua:2025-12-31 limite:20', desc: 'Rechercher dans les logs avec filtres : mot-clé, utilisateur, type d\'option, période.' },
+      { name: '/logs clear',        usage: '/logs clear',                                                                                                    desc: 'Supprime tous les logs de recherche enregistrés.' }
     ]
   },
   {
