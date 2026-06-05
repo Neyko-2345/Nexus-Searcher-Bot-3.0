@@ -43,4 +43,17 @@ for (const file of eventFiles) {
 initDB();
 await loadAllPlugins();
 
+// Empêche le bot de crasher sur des erreurs Discord non-critiques (ex: interaction expirée 10062)
+client.on('error', (err) => {
+  console.error('[CLIENT ERROR]', err.message || err);
+});
+
+process.on('unhandledRejection', (err) => {
+  console.error('[UNHANDLED REJECTION]', err?.message || err);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('[UNCAUGHT EXCEPTION]', err?.message || err);
+});
+
 client.login(process.env.DISCORD_TOKEN);

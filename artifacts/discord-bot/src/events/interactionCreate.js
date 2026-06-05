@@ -273,6 +273,8 @@ export async function execute(interaction, client) {
 
   // ── BUTTONS ─────────────────────────────────────────────────────────────────
   if (interaction.isButton()) {
+    // Wrap all button handling to prevent crashes on expired interactions
+    try {
 
     // Bouton profil utilisateur
     if (interaction.customId === 'user_profile') {
@@ -399,6 +401,11 @@ export async function execute(interaction, client) {
     }
 
     return;
+    } catch (err) {
+      const code = err?.code;
+      // 10062 = interaction expirée, pas une vraie erreur
+      if (code !== 10062) console.error('[BUTTON ERROR]', err?.message || err);
+    }
   }
 
   // ── SELECT MENUS ─────────────────────────────────────────────────────────────
