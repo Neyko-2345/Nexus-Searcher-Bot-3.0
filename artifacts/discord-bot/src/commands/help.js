@@ -129,13 +129,15 @@ const COMMANDS = [
     category: '💳 Crédits & Plans — `/credits` & `/plan`',
     adminOnly: true,
     cmds: [
-      { name: '/credits add',       usage: '/credits add user:@Dupont montant:10',         desc: 'Ajoute des crédits à un utilisateur.' },
-      { name: '/credits unlimited', usage: '/credits unlimited user:@Dupont',              desc: 'Donne un accès illimité (plus de limite de recherches).' },
-      { name: '/credits reset',     usage: '/credits reset user:@Dupont',                  desc: 'Remet un utilisateur sur le plan gratuit.' },
-      { name: '/credits info',      usage: '/credits info user:@Dupont',                   desc: 'Voir le plan, les crédits et le prochain rechargement.' },
-      { name: '/plan set',          usage: '/plan set role:@VIP nom:vip credits:50 illimite:true', desc: 'Associe un plan à un rôle Discord.' },
-      { name: '/plan list',         usage: '/plan list',                                   desc: 'Liste tous les plans configurés par rôle.' },
-      { name: '/plan apply',        usage: '/plan apply user:@Dupont role:@VIP',           desc: 'Applique manuellement un plan à un utilisateur.' }
+      { name: '/credits add',       usage: '/credits add user:@Dupont montant:10',                              desc: 'Ajoute des crédits à un utilisateur.' },
+      { name: '/credits unlimited', usage: '/credits unlimited user:@Dupont',                                   desc: 'Donne un accès illimité (plus de limite de recherches).' },
+      { name: '/credits reset',     usage: '/credits reset user:@Dupont',                                       desc: 'Remet un utilisateur sur le plan gratuit.' },
+      { name: '/credits info',      usage: '/credits info user:@Dupont',                                        desc: 'Voir le plan, les crédits et le prochain rechargement.' },
+      { name: '/plan set',          usage: '/plan set role:@VIP nom:vip credits:50 illimite:true duree:30',     desc: 'Associe un plan à un rôle Discord. Option `duree` (jours) facultative — active l\'expiration automatique.' },
+      { name: '/plan list',         usage: '/plan list',                                                        desc: 'Liste tous les plans configurés (inclut la durée d\'abonnement si définie).' },
+      { name: '/plan apply',        usage: '/plan apply user:@Dupont role:@VIP',                                desc: 'Applique manuellement un plan + attribue le rôle. Si le plan a une durée, crée le timer et envoie un DM de confirmation à l\'utilisateur.' },
+      { name: '/plan subs',         usage: '/plan subs user:@Dupont',                                          desc: 'Voir tous les abonnements actifs d\'un utilisateur (date d\'expiration, rappels envoyés).' },
+      { name: '/plan revoke',       usage: '/plan revoke user:@Dupont role:@VIP',                               desc: 'Révoquer manuellement un abonnement — retire le rôle, remet le plan de base, DM à l\'utilisateur.' },
     ]
   },
   {
