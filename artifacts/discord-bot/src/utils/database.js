@@ -210,6 +210,21 @@ export function initDB() {
     );
   `);
 
+  // ── Abonnements ──────────────────────────────────────────────────────────────
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS plan_subscriptions (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      guild_id TEXT NOT NULL,
+      user_id TEXT NOT NULL,
+      role_id TEXT NOT NULL,
+      plan_name TEXT NOT NULL,
+      expires_at INTEGER NOT NULL,
+      reminded_1day INTEGER DEFAULT 0,
+      reminded_5min INTEGER DEFAULT 0,
+      UNIQUE(guild_id, user_id, role_id)
+    );
+  `);
+
   // Safe migrations for tables that already exist
   const safeAlter = (sql) => { try { db.exec(sql); } catch {} };
   safeAlter("ALTER TABLE search_logs ADD COLUMN user_tag TEXT");

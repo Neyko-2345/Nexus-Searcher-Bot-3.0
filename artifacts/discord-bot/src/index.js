@@ -4,6 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { dirname, join } from 'path';
 import { initDB } from './utils/database.js';
 import { loadAllPlugins } from './utils/pluginLoader.js';
+import { initSubscriptionManager } from './utils/subscriptionManager.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -42,6 +43,7 @@ for (const file of eventFiles) {
 
 initDB();
 await loadAllPlugins();
+initSubscriptionManager(client);
 
 // Empêche le bot de crasher sur des erreurs Discord non-critiques (ex: interaction expirée 10062)
 client.on('error', (err) => {
