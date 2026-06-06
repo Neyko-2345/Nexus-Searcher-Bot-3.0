@@ -39,21 +39,41 @@ async function loadToolModule(toolId) {
 }
 
 /**
- * Récupère les tools actifs compatibles avec le type de requête détecté.
- * Les tools s'exécutent sur TOUTES les options (global, email, phone…)
- * dès que le type de requête correspond — sans restriction par option sélectionnée.
+ * Récupère les tools actifs compatibles avec l'option sélectionnée ET le type de requête détecté.
+ *
+ * Règle des liens d'options :
+ *  - Tool AVEC liens dans tool_option_links → tourne UNIQUEMENT sur les options liées.
+ *    (ex: flowsint lié à "username" → ne tourne pas sur email, phone, groupes, global…)
+ *  - Tool SANS liens → tourne sur toutes les options (comportement global, rétro-compat).
+ *  - Recherche globale (optionValue = null) → seuls les tools sans liens s'exécutent.
  */
 export function getCompatibleTools(detectedType, optionValue = null) {
   const db = getDB();
   const tools = db.prepare('SELECT * FROM tools WHERE enabled = 1').all();
 
-  // Filtrage uniquement par type de requête détecté (pas par option Discord)
-  if (!detectedType || detectedType === 'global') return tools;
+  // ── Filtrage par liens d'options ──────────────────────────────────────────
+  // On récupère tous les liens en une seule requête pour éviter N+1
+  const allLinks = db.prepare('SELECT tool_id, option_value FROM tool_option_links').all();
+  const linkMap  = {};
+  for (const lk of allLinks) {
+    if (!linkMap[lk.tool_id]) linkMap[lk.tool_id] = [];
+    linkMap[lk.tool_id].push(lk.option_value);
+  }
+
+  const optionFiltered = tools.filter(tool => {
+    const linked = linkMap[tool.id];
+    if (!linked || linked.length === 0) return true;          // pas de liens → global
+    if (!optionValue) return false;                           // lié mais recherche globale → skip
+    return linked.includes(optionValue);                      // lié → seulement sur l'option exacte
+  });
+
+  // ── Filtrage par type de requête détecté ─────────────────────────────────
+  if (!detectedType || detectedType === 'global') return optionFiltered;
 
   const compatible = getCompatibleQueryTypes(detectedType);
-  if (!compatible) return tools;
+  if (!compatible) return optionFiltered;
 
-  return tools.filter(t => {
+  return optionFiltered.filter(t => {
     if (!t.query_types) return true;
     try {
       const types = JSON.parse(t.query_types);
