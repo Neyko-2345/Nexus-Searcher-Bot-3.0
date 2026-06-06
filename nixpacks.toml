@@ -5,4 +5,4 @@ nixPkgs = ["nodejs_22", "nodePackages.pnpm"]
 cmds = ["pnpm install --no-frozen-lockfile"]
 
 [start]
-cmd = "node artifacts/discord-bot/src/index.js"
+cmd = "node --experimental-sqlite artifacts/discord-bot/src/index.js"
