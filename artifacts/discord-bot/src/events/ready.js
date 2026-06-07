@@ -41,15 +41,21 @@ function startStatusWatcher(client) {
 
             const hasRole = member.roles.cache.has(cfg.role_id);
 
-            if (hasStatus && !hasRole) {
+                        if (hasStatus && !hasRole) {
               await member.roles.add(cfg.role_id).catch(e =>
                 console.error(`[STATUS] Cannot add role to ${member.user.tag}:`, e.message)
               );
+              db.prepare("INSERT OR REPLACE INTO status_role_assigned (user_id, guild_id) VALUES (?, ?)").run(member.id, guild.id);
             } else if (!hasStatus && hasRole) {
-              await member.roles.remove(cfg.role_id).catch(e =>
-                console.error(`[STATUS] Cannot remove role from ${member.user.tag}:`, e.message)
-              );
+              const wasAssignedByBot = db.prepare("SELECT 1 FROM status_role_assigned WHERE user_id = ? AND guild_id = ?").get(member.id, guild.id);
+              if (wasAssignedByBot) {
+                await member.roles.remove(cfg.role_id).catch(e =>
+                  console.error(`[STATUS] Cannot remove role from ${member.user.tag}:`, e.message)
+                );
+                db.prepare("DELETE FROM status_role_assigned WHERE user_id = ? AND guild_id = ?").run(member.id, guild.id);
+              }
             }
+
           }
         } catch (e) {
           console.error(`[STATUS] Guild ${guild.name} error:`, e.message);
