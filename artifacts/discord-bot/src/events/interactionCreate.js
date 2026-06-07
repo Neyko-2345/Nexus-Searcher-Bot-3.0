@@ -221,8 +221,8 @@ function buildUserGuideEmbed(db) {
 
   const defaultDesc = [ 
     '**Avant tout consulte les salons suivant :**',
-    '<#1513135361625292881>
-    '<#1510277638415978496>
+    '<#1513135361625292881>',
+    '<#1510277638415978496>',
     '',
     '**Comment utiliser NΞXUS™ S€archer ?**',
     '',
