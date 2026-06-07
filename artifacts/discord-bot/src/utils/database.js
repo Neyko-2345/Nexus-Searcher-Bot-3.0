@@ -194,9 +194,15 @@ export function initDB() {
       locked_at TEXT
     );
 
-    CREATE TABLE IF NOT EXISTS statut_log_config (
+        CREATE TABLE IF NOT EXISTS statut_log_config (
       guild_id TEXT PRIMARY KEY,
       channel_id TEXT
+    );
+
+    CREATE TABLE IF NOT EXISTS status_role_assigned (
+      user_id TEXT,
+      guild_id TEXT,
+      PRIMARY KEY (user_id, guild_id)
     );
 
     CREATE TABLE IF NOT EXISTS bot_action_logs (
