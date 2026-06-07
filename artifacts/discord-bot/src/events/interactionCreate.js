@@ -220,7 +220,7 @@ function buildUserGuideEmbed(db) {
   const color = guideCfg.color ? parseInt(guideCfg.color.replace('#', ''), 16) : 0x3B3B44;
 
   const defaultDesc = [ 
-    '**Avant tout consulte c'est salons :**',
+    '**Avant tout consulte les salons suivant :**',
     '<#1513135361625292881>
     '<#1510277638415978496>
     '',
